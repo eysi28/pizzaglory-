@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <link href="https://fonts.cdnfonts.com/css/norwester" rel="stylesheet">   
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+  <title>Contact Us</title>
+  <style>
+   @import url('https://fonts.cdnfonts.com/css/norwester');
+body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: url('content://com.android.providers.media.documents/document/image%3A1000011767') no-repeat center center fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+html{
+    height: 100%;
+}    
+    
+    
+
+    header {
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+     .logo {
+      background: url('content://media/external/downloads/1000003555') no-repeat center center;
+      background-size: contain;
+      width: 120px;
+      height: 60px;
+      height: 60px;
+    }
+    
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .book-btn {
+      padding: 8px 16px;
+      color: white;
+      background-color: #ff3333;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 290px;
+      width: auto;
+      background: url('content://media/external/downloads/1000003519') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+    }
+
+   .hero-section h1 {
+      position: relative;
+      color: white;
+      font-family: 'Norwester', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+     letter-spacing: 3px;
+      z-index: 2;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+      .hero-section h2 {
+            position: relative;
+      color: white;
+      font-family: 'Norwester', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+      letter-spacing: 3px;
+      z-index: 2;
+      margin: 0;
+      letter-spacing: 2px;  
+      opacity: 0.7;
+      }
+
+    main {
+      flex-grow: 1;
+      padding: 0;
+      text-align: center;
+    }
+
+ #contact {
+  background-color: #fff;
+  padding: 20px 20px 50px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px 0 20px;
+}
+
+.section-subtitle {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  font-size: 18px;
+  color: gray;
+  line-height: 1.6;
+}
+
+.contact-form-box {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+  text-align: left;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #ccc;
+}
+
+.footer-background {
+    background-color: rgba(128, 128, 128, 0.5);
+    backdrop-filter:blur(5px);
+    padding: 2rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+    
+}
+
+.footer-logo img {
+    height: 80px;
+    width: 80px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Cinzel';
+    font-weight: bold;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-copy {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff4d4d;
+}
+
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <a href="home1.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="reservation.html" class="book-btn">Book a Table</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h1>PIZZA GLORY</h1>
+      <h2>CONTACT</h2>
+    </section>
+  
+    <section id="contact">
+  <div class="contact-container">
+    <h2 class="section-title">CONTACT US</h2>
+
+    <h3 class="section-subtitle">Address</h3>
+    <p class="section-text">
+      Pizza Glory, Road 3865 Block 1038 Building 2666G<br>
+      
+      Bahrain, 973, Hamad Town, Bahrain
+    </p>
+
+    <h3 class="section-subtitle">Hotline</h3>
+    <p class="section-text">
+      +973 1768 3344<br>
+      +973 1721 1654 - +973 3333 6432
+    </p>
+    <br>
+
+    <h3 class="section-subtitle">Open Time</h3>
+    <p class="section-text">
+      Weekdays : 3:00 PM – 12:00 AM<br>
+      Weekend : 3:00 PM – 1:00 AM
+    </p>
+  </div>
+</section>
+
+
+<div class="contact-form-box">
+  <h2 class="form-title">WRITE US</h2>
+  <form>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Full Name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter Email Address" />
+      </div>
+    </div>
+    <div class="form-group full-width">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Type Here..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+</div>
+  </main>
+  <footer class="footer-background">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Pizza Glory Logo">
+        </div>
+            <div class="footer-links">
+            <a href="home1.html">Home</a>
+            <span>•</span>
+            <a href="#contact">Contact</a>
+            <span>•</span>
+            <a href="menu.html">Menu</a>
+          
+        </div>
+            <div class="footer-links">            
+            <a href="reservation.html">Reservation</a>
+        </div>
+       
+       
+        <p class="footer-copy">&copy; 2025 Pizza Glory. All rights reserved.</p>
+    </footer>
+</footer>
+  
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.cdnfonts.com/css/norwester" rel="stylesheet">   
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+  <title>Reservation</title>
+  <style>
+      @import url('https://fonts.cdnfonts.com/css/norwester');
+body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+     background: url('') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    }
+html{
+    height: 100%;
+}    
+    
+    
+
+    header {
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      background: url('content://media/external/downloads/1000003555') no-repeat center center;
+      background-size: contain;
+      width: 120px;
+      height: 60px;
+      height: 60px;
+      
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .book-btn {
+      padding: 8px 16px;
+      color: white;
+      background-color: #ff3333;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 290px;
+      width: auto;
+      background: url('content://media/external/downloads/1000003519') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+    }
+
+   .hero-section h1 {
+      position: relative;
+      color: white;
+      font-family: 'Norwester', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+     letter-spacing: 3px;
+      z-index: 2;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+      .hero-section h2 {
+            position: relative;
+      color: white;
+      font-family: 'Norwester', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+      letter-spacing: 3px;
+      z-index: 2;
+      margin: 0;
+      letter-spacing: 2px;  
+      opacity: 0.7;
+      }
+
+
+    
+
+    main {
+      flex-grow: 1;
+      padding: 0;
+      text-align: center;
+    }
+
+
+
+.reservation-section {
+  max-width: 900px;
+  margin: 190px auto 40px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+.reservation-section h2 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+
+.reservation-section p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #666;
+}
+.reservation-section button{
+    margin-top: 40px;
+}
+
+.reservation-form{
+    text-align: left;
+}
+
+.reservation-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row.full {
+  flex-direction: column;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#char-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 95%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+input[type="text"][placeholder="Full Name"] {
+  background: #f9f9f9 url('https://cdn-icons-png.flaticon.com/512/747/747376.png') no-repeat right 14px center;
+  background-size: 20px;
+}
+
+input[type="tel"] {
+  background: #f9f9f9 url('https://cdn-icons-png.flaticon.com/512/455/455705.png') no-repeat right 14px center;
+  background-size: 20px;
+}
+
+input[type="email"] {
+  background: #f9f9f9 url('https://cdn-icons-png.flaticon.com/512/561/561127.png') no-repeat right 14px center;
+  background-size: 20px;
+}
+
+input[type="date"] {
+  background: #f9f9f9 url('https://cdn-icons-png.flaticon.com/512/747/747310.png') no-repeat right 14px center;
+  background-size: 20px;
+}
+
+input[type="time"] {
+  background: #f9f9f9 url('https://cdn-icons-png.flaticon.com/512/2921/2921222.png') no-repeat right 14px center;
+  background-size: 20px;
+}
+
+select {
+  background: #f9f9f9 url('https://cdn-icons-png.flaticon.com/512/271/271210.png') no-repeat right 14px center;
+  background-size: 20px;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+small {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.form-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-button button {
+  background-color: #eee;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button button:hover {
+  background-color: #ccc;
+}
+
+
+
+ 
+
+button {
+  color: Black;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.footer-background {
+    background-color: rgba(128, 128, 128, 0.5);
+    backdrop-filter:blur(5px);
+    padding: 2rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+    
+}
+
+.footer-logo img {
+    height: 80px;
+    width: 80px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Cinzel';
+    font-weight: bold;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-copy {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff4d4d;
+}
+      
+</style>
+</head>
+<body>
+  <header>
+   <div class="logo"></div>
+    <nav>
+      <a href="home1.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="reservation.html" class="book-btn">Book a Table</a>
+    </nav>
+  </header>
+
+  
+    <section class="hero-section">
+      <h1>PIZZA GLORY</h1>
+      <h2>RESERVATION</h2>
+    </section>
+ <main>
+     
+ <section class="reservation-section">
+  <h2>RESERVE A TABLE</h2>
+  <p>CALL US +1700 0363 OR COMPLETE THE FORM BELOW</p>
+  <form class="reservation-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Mobile" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter Email Address" required>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Start Time</label>
+        <input type="time" required>
+      </div>
+      <div class="form-group">
+        <label>End Time</label>
+        <input type="time" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Table Type</label>
+        <select required>
+          <option>Birthday</option>
+          <option>Anniversary</option>
+          <option>Casual</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Number of Guests</label>
+  <input type="number" placeholder="e.g. 4" min="1" max="20" required>
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label>Description</label>
+        <textarea placeholder="Type Here..." maxlength="300" id="description"></textarea>
+        <small id="char-counter">0 / 300</small>
+        
+      </div>
+    </div>
+    <div class="form-button">
+      <button type="submit">BOOK A TABLE</button>
+    </div>
+  </form>
+</section>
+  </main>
+    
+      <footer class="footer-background">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Pizza Glory Logo">
+        </div>
+            <div class="footer-links">
+            <a href="home1.html">Home</a>
+            <span>•</span>
+            <a href="contact.html">Contact</a>
+            <span>•</span>
+            <a href="menu.html">Menu</a>
+          
+        </div>
+            <div class="footer-links">            
+            <a href="reservation.html">Reservation</a>
+        </div>
+       
+        <p class="footer-copy">&copy; 2025 Pizza Glory. All rights reserved.</p>
+    </footer>
+ 
+  
+<script>
+  const textarea = document.getElementById('description');
+  const counter = document.getElementById('char-counter');
+
+  textarea.addEventListener('input', () => {
+    counter.textContent = `${textarea.value.length} / ${textarea.maxLength}`;
+  });
+</script>
+
+
+</body>
+</html>

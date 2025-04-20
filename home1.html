@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.cdnfonts.com/css/norwester" rel="stylesheet">   
+  <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+  
+  <title>Home</title>
+  <style>
+  @import url('https://fonts.cdnfonts.com/css/norwester');
+  
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: url('content://media/external/downloads/1000003582') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    header {
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity:0.7;
+    }
+
+       .logo {
+      background: url('content://media/external/downloads/1000003555') no-repeat center center;
+      background-size: contain;
+      width: 120px;
+      height: 60px;
+      height: 60px;
+    }
+
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .book-btn {
+      padding: 8px 16px;
+      background-color: #ff3333;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+
+    main {
+      flex-grow: 1;
+      padding: 0;
+      text-align: center;
+    }
+
+    .image-overlay-block {
+      position: relative;
+      margin-top: 80px;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .overlay-one {
+      background-image: url('');
+    }
+
+    .overlay-two {
+      background-image: url('');
+    }
+
+    .image-overlay-block::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      
+    }
+
+    .overlay-text {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      height: 10%;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    }
+
+    .overlay-text .est {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .overlay-text .title {
+      font-size: 120px;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      margin: 10px 0;
+    }
+
+    .overlay-text .subtext {
+      font-size: 35px;
+      letter-spacing: 1px;
+    }
+
+    .learn-more {
+      top: -85px;
+      bottom: 100px;
+      padding: 14px 28px;
+      font-size: 30px;
+      letter-spacing: 3px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 2px solid white;
+      padding-bottom: 4px;
+    }
+
+    .first-image {
+      margin-top: 0;
+    }
+
+    button {
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 25px;
+    }
+
+.footer-background {
+    background-color: rgba(128, 128, 128, 0.5);
+    backdrop-filter:blur(5px);
+    padding: 2rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+    
+}
+
+.footer-logo img {
+    height: 80px;
+    width: 80px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Cinzel';
+    font-weight: bold;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-copy {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff4d4d;
+}
+
+    .active-footer-link {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+    }
+  
+  @media (min-width: 767px) {
+    
+   .title{
+     font-size:12rem;
+   }     
+    
+  }
+  
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <a href="home1.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="reservation.html" class="book-btn">Book a Table</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <h1></h1>
+    <h2></h2>
+  </section>
+
+  <main>
+    <div class="image-overlay-block overlay-one">
+      <div class="overlay-text">
+        <p class="est">EST.2025</p>
+        <h1 class="title">Pizza Glory</h1>
+        <p class="subtext">THE ITALIAN RESTO</p>
+      </div>
+    </div>
+
+    <div class="image-overlay-block overlay-two first-image">
+      <div class="overlay-text">
+        <a href="#" class="learn-more">Learn More</a>
+      </div>
+    </div>
+  </main>
+
+ <footer class="footer-background">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Pizza Glory Logo">
+        </div>
+            <div class="footer-links">
+            <a href="home.html">Home</a>
+            <span>•</span>
+            <a href="contact.html">Contact</a>
+            <span>•</span>
+            <a href="menu.html">Menu</a>
+          
+        </div>
+            <div class="footer-links">            
+            <a href="reservation.html">Reservation</a>
+        </div>
+       
+        <p class="footer-copy">&copy; 2025 Pizza Glory. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
