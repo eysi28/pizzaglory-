@@ -1,40 +1,43 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-     <link href="https://fonts.cdnfonts.com/css/norwester" rel="stylesheet">   
-    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
-  <title>ADMIN</title>
+  <meta charset="UTF-8">
+  <title>Admin | Pizza Glory</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.cdnfonts.com/css/norwester" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+
   <style>
-  @import url('https://fonts.cdnfonts.com/css/norwester');
-  
-     body {
+    @import url('https://fonts.cdnfonts.com/css/norwester');
+
+    /* General Body Styling */
+    body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       height: 100vh;
-     background: url('content://com.android.providers.media.documents/document/image%3A1000011767') no-repeat center center fixed;
-  background-size: cover;
-  background-position: center;
+      background: url('content://com.android.providers.media.documents/document/image%3A1000011767') no-repeat center center fixed;
+      background-size: cover;
+      background-position: center;
     }
-    
-    
 
+    /* Header */
     header {
       background-color: white;
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .logo {
       background: url('content://media/external/downloads/1000003555') no-repeat center center;
       background-size: contain;
       width: 120px;
-      height: 60px;
       height: 60px;
     }
 
@@ -62,7 +65,7 @@
       gap: 6px;
     }
 
-    
+    /* Hero Section */
     .hero-section {
       position: relative;
       height: 290px;
@@ -85,206 +88,199 @@
       z-index: 1;
     }
 
-   .hero-section h1 {
+    .hero-section h1,
+    .hero-section h2 {
       position: relative;
-      color: white;
       font-family: 'Norwester', sans-serif;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+      letter-spacing: 2px;
+      z-index: 2;
+      margin: 0;
+    }
+
+    .hero-section h1 {
       font-size: 4rem;
       font-weight: 700;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
-     letter-spacing: 3px;
-      z-index: 2;
-      margin: 0;
-      letter-spacing: 2px;
     }
-     
-   .hero-section h2 {
-      position: relative;
-      color: white;
-      font-family: 'Norwester', sans-serif;
+
+    .hero-section h2 {
       font-size: 2.5rem;
       font-weight: 700;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
-      letter-spacing: 3px;
-      z-index: 2;
-      margin: 0;
-      letter-spacing: 2px;  
       opacity: 0.7;
-      }
+    }
 
-
+    /* Main Section */
     main {
       flex-grow: 1;
       text-align: center;
     }
 
+    /* Login Box */
+    .login-box {
+      margin-top: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      background-color: transparent;
+    }
 
-.login-box {
- margin-top: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  background-color: transparent;
-}
+    .login-form {
+      text-align: left;
+      height: 550px;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      font-family: 'Georgia', serif;
+    }
 
-.login-form {
-  text-align: left;
-  height: 550px;
-  background: white;
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  font-family: 'Georgia', serif;
-}
+    .login-form h2 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
 
-.login-form h2 {
-  text-align: left;
-  font-size: 50px;
-  margin-bottom: 10px;
-}
+    .login-helper {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
 
-.login-helper {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
+    .login-helper a,
+    .login-links a,
+    .password-wrapper .show-toggle {
+      color: #007c89;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-.login-helper a {
-  color: #007c89;
-  text-decoration: none;
-}
+    .login-form label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+      font-weight: bold;
+    }
 
-.login-form label {
-  font-size: 14px;
-  margin-bottom: 5px;
-  display: block;
-  font-weight: bold;
-}
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-.login-form input[type="text"],
-.login-form input[type="password"] {
-  width: 80%;
-  padding: 10px;
-  margin-bottom: 15px;
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper .show-toggle {
+      position: absolute;
+      right: 90px;
+      top: 10px;
+      font-size: 13px;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .remember-me input {
+      margin-right: 8px;
+    }
+
+    .login-form button {
+      background-color: #007c89;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      width: 40%;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .login-links {
+      margin-top: 20px;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+     
+     
+.disclaimer-text {
+  font-size: 12px;
+  margin: 15px 0;
+  color: #333;
+  line-height: 1.5;
   border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.password-wrapper {
-  position: relative;
-}
-
-.password-wrapper .show-toggle {
-  position: absolute;
-  right: 90px;
-  top: 10px;
-  font-size: 13px;
-  cursor: pointer;
-  color: #007c89;
-}
-
-.remember-me {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.remember-me input {
-  margin-right: 8px;
-}
-
-.login-form button {
-  background-color: #007c89;
-  color: white;
-  font-weight: bold;
   padding: 10px;
-  width: 40%;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
+  border-radius: 8px;
 }
 
-.login-links {
-  margin-top: 20px;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.login-links a {
+.disclaimer-text a {
   color: #007c89;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 
+ 
+    /* Footer */
+    .footer-background {
+      background-color: rgba(128, 128, 128, 0.5);
+      backdrop-filter: blur(5px);
+      padding: 2rem;
+      margin-top: auto;
+      text-align: center;
+    }
 
+    .footer-logo {
+      margin-bottom: 1.5rem;
+    }
 
+    .footer-logo img {
+      height: 80px;
+      width: 80px;
+    }
 
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      font-family: 'Cinzel';
+      font-weight: bold;
+      align-items: center;
+      gap: 0.6rem;
+    }
 
+    .footer-links a {
+      color: black;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-button {
-  color: Black;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 25px;
-}
+    .footer-links a:hover {
+      color: #ff4d4d;
+    }
 
-.footer-background {
-    background-color: rgba(128, 128, 128, 0.5);
-    backdrop-filter:blur(5px);
-    padding: 2rem;
-    margin-top: auto;
-    text-align: center;
-}
-
-.footer-logo {
-    margin-bottom: 1.5rem;
+    .footer-copy {
+      display: flex;
+      justify-content: center;
+      font-size: 14px;
+      color: #666;
+    }
     
-}
-
-.footer-logo img {
-    height: 80px;
-    width: 80px;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    font-size: 24px;
-    font-family: 'Cinzel';
-    font-weight: bold;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.footer-copy {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    color: #666;
-}
-
-.footer-links a {
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #ff4d4d;
-}
-
-
-
     
-          
-</style>
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="logo"></div>
     <nav>
@@ -295,78 +291,80 @@ button {
     </nav>
   </header>
 
+  <!-- Hero -->
   <main>
     <section class="hero-section">
       <h1>PIZZA GLORY</h1>
       <h2>ADMIN</h2>
     </section>
-  
-  <div class="login-box">
-  <form class="login-form">
-    <h2>Admin Log in</h2>
-    <p class="login-helper">
-      Need a Pizza Glory account? <a href="#">Create an account</a>
-    </p>
 
-    <label>Username or Email</label>
-    <input type="text" required>
+    <!-- Login Form -->
+    <div class="login-box">
+      <form class="login-form">
+        <h2>Admin Log in</h2>
+        <p class="login-helper">Need a Pizza Glory account? <a href="#">Create an account</a></p>
 
-    <label>Password</label>
-    <div class="password-wrapper">
-      <input type="password" id="password" required>
-      <span class="show-toggle" onclick="togglePassword()">Show</span>
+        <label>Username or Email</label>
+        <input type="text" required>
+
+        <label>Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" required>
+          <span class="show-toggle" onclick="togglePassword()">Show</span>
+        </div>
+
+        <div class="remember-me">
+          <input type="checkbox" id="keep-logged-in">
+          <label for="keep-logged-in">Keep me logged in</label>
+        </div>
+
+        <button type="submit">Log in</button>
+
+        <div class="login-links">
+          <a href="#">Forgot username?</a>
+          <a href="#">Forgot password?</a>
+          <a href="#">Can't log in?</a>
+        </div>
+        <p class="disclaimer-text">
+  By creating an account, you agree to our 
+  <a href="#">Terms</a> and have read and acknowledge the 
+  <a href="#">Global Privacy Statement</a>.
+</p>
+
+      </form>
     </div>
-
-    <div class="remember-me">
-      <input type="checkbox" id="keep-logged-in">
-      <label for="keep-logged-in">Keep me logged in</label>
-    </div>
-
-    <button type="submit">Log in</button>
-
-    <div class="login-links">
-      <a href="#">Forgot username?</a>
-      <a href="#">Forgot password?</a>
-      <a href="#">Can't log in?</a>
-    </div>
-  </form>
-</div>
-
-    
   </main>
- <footer class="footer-background">
-        <div class="footer-logo">
-            <img src="img/logo.png" alt="Pizza Glory Logo">
-        </div>
-            <div class="footer-links">
-            <a href="home1.html">Home</a>
-            <span>•</span>
-            <a href="contact.html">Contact</a>
-            <span>•</span>
-            <a href="menu.html">Menu</a>
-          
-        </div>
-            <div class="footer-links">            
-            <a href="reservation.html">Reservation</a>
-        </div>
-       
-        <p class="footer-copy">&copy; 2025 Pizza Glory. All rights reserved.</p>
-    </footer>
-  
- <script>
-  function togglePassword() {
-    const passwordInput = document.getElementById("password");
-    const toggle = document.querySelector(".show-toggle");
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      toggle.textContent = "Hide";
-    } else {
-      passwordInput.type = "password";
-      toggle.textContent = "Show";
+
+  <!-- Footer -->
+  <footer class="footer-background">
+    <div class="footer-logo">
+      <img src="img/logo.png" alt="Pizza Glory Logo">
+    </div>
+    <div class="footer-links">
+      <a href="home1.html">Home</a><span>•</span>
+      <a href="contact.html">Contact</a><span>•</span>
+      <a href="menu.html">Menu</a>
+    </div>
+    <div class="footer-links">
+      <a href="reservation.html">Reservation</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Pizza Glory. All rights reserved.</p>
+    
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggle = document.querySelector(".show-toggle");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggle.textContent = "Hide";
+      } else {
+        passwordInput.type = "password";
+        toggle.textContent = "Show";
+      }
     }
-  }
-</script>
-
-
+  </script>
 </body>
 </html>
